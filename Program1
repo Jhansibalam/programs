@@ -10,10 +10,10 @@ int main()
     
     while(t--)
     {
-        int n;//5
-        cin>>n;//[10,20,30,50,60]
-        long long int arr[n+1]={0};//[0,10,20,30,50,60]
-        long long int prefix[n+1]={0};//[0,10,30,60,110,170]
+        int n;
+        cin>>n;
+        long long int arr[n+1]={0};
+        long long int prefix[n+1]={0};
         for(int i=1;i<=n;i++)
         {
             cin>>arr[i];
@@ -30,3 +30,4 @@ int main()
         }
     }
 }
+
