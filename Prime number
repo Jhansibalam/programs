@@ -1,0 +1,35 @@
+#include <stdio.h>
+ int main()
+{
+    int num,i,j;
+    scanf("%d",&num);
+ 
+    int p[num+1];
+ for(i = 2; i<=num; i++)
+        p[i] = i;
+ 
+    i = 2;
+    while ((i*i) <= num)
+    {
+        if (p[i] != 0)
+        {
+            for(j=2; j<num; j++)
+            {
+                if (p[i]*j > num)
+                    break;
+                else
+                    
+                    p[p[i]*j]=0;
+            }
+        }
+        i++;
+    }
+    for(i = 2; i<=num; i++)
+    {
+        
+        if (p[i]!=0)
+            printf("%d ",p[i]);
+    }
+ 
+    return 0;
+}
