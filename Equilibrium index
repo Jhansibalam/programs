@@ -17,20 +17,20 @@ int main() {
 	    prefix[i]=prefix[i-1]+arr[i];
 	}
 
-	int left_sum=0,right_sum=0,flag=0;
+	int ls=0,rs=0,f=0;
 	int eq_index;
 	for(int i=1;i<n-2;i++)
 	{
-	    left_sum=prefix[i-1];
-	    right_sum=prefix[n-1]-prefix[i];
-	    if(left_sum==right_sum)
+	    ls=prefix[i-1];
+	    rs=prefix[n-1]-prefix[i];
+	    if(ls==rs)
 	    {
 	        eq_index=i;
-	        flag=1;
+	        f=1;
 	        break;
 	    }
 	}
-	if(flag)
+	if(f)
 	{
 	    cout<<eq_index;
 	}
